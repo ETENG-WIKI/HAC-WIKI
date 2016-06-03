@@ -1,0 +1,6 @@
+site_name: HAC 混合应用开发教程
+pages:
+- 关于WIKI: index.md
+- 更多: moreinfo.md
+- 联系我们: contact.md
+theme: readthedocs
