@@ -1,0 +1,34 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "\u5173\u4e8eHAC-WIKI\n\n\n\n\n\n\n\u6df7\u5408\u5e94\u7528\u7b80\u4ecb\n\n\n\n\n\u5e94\u7528\u6253\u5305\n\n\n\u524d\u7aef\u5f00\u53d1\n\n\n\n\n\u73af\u5883\u642d\u5efa\n\n\n\n\n\n\n\u66f4\u591a\u6559\u7a0b\n\n\n\n\n\n\n\u8054\u7cfb\u6211\u4eec\n\n\n\n\n\n\n\n\n\u8d21\u732e\u8005\n\n\n\n\njxy   \n\n\nzxh", 
+            "title": "\u5173\u4e8eWIKI"
+        }, 
+        {
+            "location": "/#_1", 
+            "text": "jxy     zxh", 
+            "title": "\u8d21\u732e\u8005"
+        }, 
+        {
+            "location": "/moreinfo/", 
+            "text": "more: \nhttp://eteng-wiki.github.io/ETENG-WIKI/about-wiki", 
+            "title": "\u66f4\u591a"
+        }, 
+        {
+            "location": "/contact/", 
+            "text": "\u8054\u7cfb\u6211\u4eec\n\n\n\u9ad8\u5efa\u534e\n\uff1a\n\n\nEmail\n : gjh@e-teng.com.cn\n\n\nQQ\n: 596902726  \n\n\n\u5f20\u65b0\u822a\n\uff1a\n\n\nEmail\n : zxh@e-teng.com.cn\n\n\nQQ\n: 504266561  \n\n\n\u7ec4\u7ec7\u4fe1\u606f\n\n\nETENG-WIKI:\n\n\nhttps://eteng-wiki.github.io/ETENG-WIKI/about-wiki", 
+            "title": "\u8054\u7cfb\u6211\u4eec"
+        }, 
+        {
+            "location": "/contact/#_1", 
+            "text": "\u9ad8\u5efa\u534e \uff1a  Email  : gjh@e-teng.com.cn  QQ : 596902726    \u5f20\u65b0\u822a \uff1a  Email  : zxh@e-teng.com.cn  QQ : 504266561", 
+            "title": "\u8054\u7cfb\u6211\u4eec"
+        }, 
+        {
+            "location": "/contact/#_2", 
+            "text": "ETENG-WIKI:  https://eteng-wiki.github.io/ETENG-WIKI/about-wiki", 
+            "title": "\u7ec4\u7ec7\u4fe1\u606f"
+        }
+    ]
+}
