@@ -8,7 +8,7 @@
   
   
   
-  <title>联系我们 - HAC 混合应用开发教程</title>
+  <title>Cordova入门 - HAC 混合应用开发教程</title>
   
 
   <link rel="shortcut icon" href="../img/favicon.ico">
@@ -23,9 +23,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "联系我们";
-    var mkdocs_page_input_path = "contact.md";
-    var mkdocs_page_url = "/contact/";
+    var mkdocs_page_name = "Cordova入门";
+    var mkdocs_page_input_path = "getStart.md";
+    var mkdocs_page_url = "/getStart/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -62,8 +62,21 @@
 <li>
           
             <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../getStart/">Cordova入门</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Cordova入门</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#cordova">Cordova入门</a></li>
+                
+                    <li><a class="toctree-l4" href="#cordova_1">一 Cordova是什么？</a></li>
+                
+                    <li><a class="toctree-l4" href="#cordova_2">二 为什么使用Cordova？</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-start">三 GET START</a></li>
+                
+            
+            </ul>
         
     </li>
 <li>
@@ -111,18 +124,8 @@
 <li>
           
             <li>
-    <li class="toctree-l1 current">
-        <a class="current" href="./">联系我们</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#_1">联系我们</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#_2">组织信息</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../contact/">联系我们</a>
         
     </li>
 <li>
@@ -149,7 +152,7 @@
     
       
     
-    <li>联系我们</li>
+    <li>Cordova入门</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -159,16 +162,33 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="_1">联系我们</h1>
-<p><strong>高建华</strong>：<br />
-<strong>Email</strong> : gjh@e-teng.com.cn<br />
-<strong>QQ</strong>: 596902726  </p>
-<p><strong>张新航</strong>：<br />
-<strong>Email</strong> : zxh@e-teng.com.cn<br />
-<strong>QQ</strong>: 504266561  </p>
-<h1 id="_2">组织信息</h1>
-<p><strong>ETENG-WIKI:</strong>
-<a href="https://eteng-wiki.github.io/ETENG-WIKI/about-wiki">https://eteng-wiki.github.io/ETENG-WIKI/about-wiki</a></p>
+                <h1 id="cordova">Cordova入门</h1>
+<h2 id="cordova_1">一 Cordova是什么？</h2>
+<p>Cordova，旧名为phonegap，是一个流行的手机应用开发框架。
+Cordova提供了js和原生API的调用接口，通过插件，我们可以实现例如拍照，扫码等操作；
+并且提供了静态文件转换成APP的功能。</p>
+<h2 id="cordova_2">二 为什么使用Cordova？</h2>
+<p>现在我们要开发一个APP项目，有这么几种方式：<br />
+1. 采用原生应用<br />
+  优点：响应速度快，用户体验较好<br />
+  缺点：开发速度慢，成本较高<br />
+2. 采用html5应用<br />
+  优点：开发速度快，代码可以复用到iOS和android<br />
+  缺点：响应速度较慢（已有很大的改善）  </p>
+<p>cordova提供了打包html5的功能，而cordova属于apache开源基金会，可以保证较大的社区以及长期稳定的维护。</p>
+<h2 id="get-start">三 GET START</h2>
+<ol>
+<li>首先请参考环境配置部分，然后新建一个Cordova项目<br />
+<code>cordova create 项目名 &lt;包名&gt;</code></li>
+<li>添加一个平台（拿android举例）<br />
+<code>cordova platform add android</code></li>
+<li>cordova项目准备<br />
+<code>cordova platform prepare</code></li>
+<li>打包一个测试的项目<br />
+<code>cordova build</code></li>
+<li>安装APK，在platforms/android/build/outputs/apk下可以找到打包出来的apk，安装到手机即可。  </li>
+</ol>
+<p>© 本文版权归作者和ETENG-WIKI所共有，转载请注明出处。</p>
               
             </div>
           </div>
@@ -176,8 +196,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="../direction/" class="btn btn-neutral float-right" title="Cordova目录结构">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-        <a href="../moreinfo/" class="btn btn-neutral" title="更多"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+        <a href="../buildEnv/" class="btn btn-neutral" title="Cordova环境搭建"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -203,8 +225,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../moreinfo/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../buildEnv/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
+      
+        <span style="margin-left: 15px"><a href="../direction/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

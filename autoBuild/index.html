@@ -8,7 +8,7 @@
   
   
   
-  <title>联系我们 - HAC 混合应用开发教程</title>
+  <title>Cordova自动化打包 - HAC 混合应用开发教程</title>
   
 
   <link rel="shortcut icon" href="../img/favicon.ico">
@@ -23,9 +23,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "联系我们";
-    var mkdocs_page_input_path = "contact.md";
-    var mkdocs_page_url = "/contact/";
+    var mkdocs_page_name = "Cordova自动化打包";
+    var mkdocs_page_input_path = "autoBuild.md";
+    var mkdocs_page_url = "/autoBuild/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -90,8 +90,15 @@
 <li>
           
             <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../autoBuild/">Cordova自动化打包</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Cordova自动化打包</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#cordova">Cordova自动化打包</a></li>
+                
+            
+            </ul>
         
     </li>
 <li>
@@ -111,18 +118,8 @@
 <li>
           
             <li>
-    <li class="toctree-l1 current">
-        <a class="current" href="./">联系我们</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#_1">联系我们</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#_2">组织信息</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../contact/">联系我们</a>
         
     </li>
 <li>
@@ -149,7 +146,7 @@
     
       
     
-    <li>联系我们</li>
+    <li>Cordova自动化打包</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -159,16 +156,42 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="_1">联系我们</h1>
-<p><strong>高建华</strong>：<br />
-<strong>Email</strong> : gjh@e-teng.com.cn<br />
-<strong>QQ</strong>: 596902726  </p>
-<p><strong>张新航</strong>：<br />
-<strong>Email</strong> : zxh@e-teng.com.cn<br />
-<strong>QQ</strong>: 504266561  </p>
-<h1 id="_2">组织信息</h1>
-<p><strong>ETENG-WIKI:</strong>
-<a href="https://eteng-wiki.github.io/ETENG-WIKI/about-wiki">https://eteng-wiki.github.io/ETENG-WIKI/about-wiki</a></p>
+                <h1 id="cordova">Cordova自动化打包</h1>
+<p>下面是一个自动打包的脚本：
+请将下面的一些路径进行修改，拷贝到cordova根目录，重命名为build.sh文件，</p>
+<p>以下是脚本内容</p>
+<pre><code>#!/bin/bash
+
+# 这是生成正式apk的脚本文件
+#   !!!!!!!!!!!!!!!!!!使用脚本前，请先修改应用的访问路径，并修改应用的版本号!!!!!!!!!!!!!!!!
+#   可以按照自己的需求修改相应的路径或者是相关的配置
+#   使用本脚本的前提：必须有一个cordova项目
+#   cd到cordova的根目录,通过./build.sh命令运行脚本
+
+# 按照日期生成一个apk名称
+appName=&quot;$(date &quot;+DEMO_%Y%m%d.apk&quot;)&quot;
+# 生成可以发布的release版本
+cordova build android --release
+# 拷贝生成的apk到根目录（这里的应用名称以及路径需要更改）
+cp platforms/android/build/outputs/apk/android-armv7-release-unsigned.apk android-armv7-release.apk
+# 签名文件(别名需要更改)
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore android-armv7-release.apk &lt;alias_name&gt;
+# password: XXX
+# 拷贝文件到桌面
+cp android-armv7-release.apk ~/Desktop/$appName
+
+</code></pre>
+
+<p>接下来，添加运行权限</p>
+<pre><code>chmod +x build.sh
+</code></pre>
+
+<p>运行脚本</p>
+<pre><code>./build.sh
+</code></pre>
+
+<p>windows用户请在gitbash中运行脚本。</p>
+<p>© 本文版权归作者和ETENG-WIKI所共有，转载请注明出处。</p>
               
             </div>
           </div>
@@ -176,8 +199,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href=".." class="btn btn-neutral float-right" title="关于WIKI">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-        <a href="../moreinfo/" class="btn btn-neutral" title="更多"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+        <a href="../plugin/" class="btn btn-neutral" title="Cordova插件"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -203,8 +228,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../moreinfo/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../plugin/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
+      
+        <span style="margin-left: 15px"><a href=".." style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

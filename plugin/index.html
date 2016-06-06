@@ -8,7 +8,7 @@
   
   
   
-  <title>联系我们 - HAC 混合应用开发教程</title>
+  <title>Cordova插件 - HAC 混合应用开发教程</title>
   
 
   <link rel="shortcut icon" href="../img/favicon.ico">
@@ -23,9 +23,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "联系我们";
-    var mkdocs_page_input_path = "contact.md";
-    var mkdocs_page_url = "/contact/";
+    var mkdocs_page_name = "Cordova插件";
+    var mkdocs_page_input_path = "plugin.md";
+    var mkdocs_page_url = "/plugin/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -83,8 +83,15 @@
 <li>
           
             <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../plugin/">Cordova插件</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Cordova插件</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#cordova">Cordova插件</a></li>
+                
+            
+            </ul>
         
     </li>
 <li>
@@ -111,18 +118,8 @@
 <li>
           
             <li>
-    <li class="toctree-l1 current">
-        <a class="current" href="./">联系我们</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#_1">联系我们</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#_2">组织信息</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../contact/">联系我们</a>
         
     </li>
 <li>
@@ -149,7 +146,7 @@
     
       
     
-    <li>联系我们</li>
+    <li>Cordova插件</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -159,16 +156,51 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="_1">联系我们</h1>
-<p><strong>高建华</strong>：<br />
-<strong>Email</strong> : gjh@e-teng.com.cn<br />
-<strong>QQ</strong>: 596902726  </p>
-<p><strong>张新航</strong>：<br />
-<strong>Email</strong> : zxh@e-teng.com.cn<br />
-<strong>QQ</strong>: 504266561  </p>
-<h1 id="_2">组织信息</h1>
-<p><strong>ETENG-WIKI:</strong>
-<a href="https://eteng-wiki.github.io/ETENG-WIKI/about-wiki">https://eteng-wiki.github.io/ETENG-WIKI/about-wiki</a></p>
+                <h1 id="cordova">Cordova插件</h1>
+<ul>
+<li>
+<p>什么是Cordova插件？<br />
+cordova插件是APP用来调用系统硬件应用的一种途径，可以进行拍照，扫码等一系列操作。</p>
+</li>
+<li>
+<p>为什么使用Cordova插件？<br />
+如果不使用Cordova插件，打包出的应用就是一个网页，用户只能进行浏览操作，用户体验会大打折扣。</p>
+</li>
+<li>
+<p>Cordova插件原理<br />
+js通过调用原生代码（例如：android）,来实现对于原生硬件的调用:  </p>
+</li>
+</ul>
+<pre><code>//调用接口示例：使用cordova.exec实现js的接口
+exec(&lt;successFunction&gt;, &lt;failFunction&gt;, &lt;service&gt;, &lt;action&gt;, [&lt;args&gt;]);
+</code></pre>
+
+<blockquote>
+<p>具体的插件制作，请参看官方文档</p>
+</blockquote>
+<ul>
+<li>插件的添加和移除  </li>
+</ul>
+<pre><code>//插件添加,--save代表保存这个插件到配置文件
+cordova plugin rm &lt;plugin-name&gt; --save
+//插件删除
+cordova plugin rm &lt;plugin-name&gt;
+</code></pre>
+
+<ul>
+<li>Cordova常用插件<ul>
+<li>cordova-plugin-splashscreen 闪屏插件</li>
+<li>cordova-plugin-file-transfer 文件传送</li>
+<li>cordova-plugin-whitelist 白名单</li>
+<li>cordova-open 打开文件</li>
+<li>cordova-plugin-app-version 获取应用信息</li>
+<li>cordova-plugin-camera 拍照插件</li>
+<li>phonegap-plugin-barcodescanner 二维码插件</li>
+<li>cordova-plugin-wechat 微信分享插件</li>
+</ul>
+</li>
+</ul>
+<p>© 本文版权归作者和ETENG-WIKI所共有，转载请注明出处。</p>
               
             </div>
           </div>
@@ -176,8 +208,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="../autoBuild/" class="btn btn-neutral float-right" title="Cordova自动化打包">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-        <a href="../moreinfo/" class="btn btn-neutral" title="更多"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+        <a href="../config/" class="btn btn-neutral" title="Cordova配置文件"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -203,8 +237,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../moreinfo/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../config/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
+      
+        <span style="margin-left: 15px"><a href="../autoBuild/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
