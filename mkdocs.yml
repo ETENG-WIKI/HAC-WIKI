@@ -1,5 +1,11 @@
 site_name: HAC 混合应用开发教程
 pages:
+- Cordova环境搭建: buildEnv.md
+- Cordova入门: getStart.md
+- Cordova目录结构: direction.md
+- Cordova配置文件: config.md
+- Cordova插件: plugin.md
+- Cordova自动化打包: autoBuild.md
 - 关于WIKI: index.md
 - 更多: moreinfo.md
 - 联系我们: contact.md

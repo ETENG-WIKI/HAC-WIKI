@@ -1,9 +1,11 @@
 * [关于HAC-WIKI](index.md)
 
-* 混合应用简介
-* 应用打包
-* 前端开发
-* 环境搭建
+* [Cordova环境搭建](buildEnv.md)
+* [Cordova入门](getStart.md)
+* [Cordova目录简介](direction.md)
+* [Cordova配置文件](config.md)
+* [Cordova插件](plugin.md)
+* [Cordova自动化打包](autoBuild.md)
 
 * [更多教程](moreinfo.md)
 

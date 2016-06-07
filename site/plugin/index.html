@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Cordova插件 - HAC 混合应用开发教程</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Cordova插件";
+    var mkdocs_page_input_path = "plugin.md";
+    var mkdocs_page_url = "/plugin/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../buildEnv/" class="icon icon-home"> HAC 混合应用开发教程</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../buildEnv/">Cordova环境搭建</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../getStart/">Cordova入门</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../direction/">Cordova目录结构</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../config/">Cordova配置文件</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Cordova插件</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#cordova">Cordova插件</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../autoBuild/">Cordova自动化打包</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">关于WIKI</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../moreinfo/">更多</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../contact/">联系我们</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../buildEnv/">HAC 混合应用开发教程</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../buildEnv/">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Cordova插件</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="cordova">Cordova插件</h1>
+<ul>
+<li>
+<p>什么是Cordova插件？<br />
+cordova插件是APP用来调用系统硬件应用的一种途径，可以进行拍照，扫码等一系列操作。</p>
+</li>
+<li>
+<p>为什么使用Cordova插件？<br />
+如果不使用Cordova插件，打包出的应用就是一个网页，用户只能进行浏览操作，用户体验会大打折扣。</p>
+</li>
+<li>
+<p>Cordova插件原理<br />
+js通过调用原生代码（例如：android）,来实现对于原生硬件的调用:  </p>
+</li>
+</ul>
+<pre><code>//调用接口示例：使用cordova.exec实现js的接口
+exec(&lt;successFunction&gt;, &lt;failFunction&gt;, &lt;service&gt;, &lt;action&gt;, [&lt;args&gt;]);
+</code></pre>
+
+<blockquote>
+<p>具体的插件制作，请参看官方文档</p>
+</blockquote>
+<ul>
+<li>插件的添加和移除  </li>
+</ul>
+<pre><code>//插件添加,--save代表保存这个插件到配置文件
+cordova plugin rm &lt;plugin-name&gt; --save
+//插件删除
+cordova plugin rm &lt;plugin-name&gt;
+</code></pre>
+
+<ul>
+<li>Cordova常用插件<ul>
+<li>cordova-plugin-splashscreen 闪屏插件</li>
+<li>cordova-plugin-file-transfer 文件传送</li>
+<li>cordova-plugin-whitelist 白名单</li>
+<li>cordova-open 打开文件</li>
+<li>cordova-plugin-app-version 获取应用信息</li>
+<li>cordova-plugin-camera 拍照插件</li>
+<li>phonegap-plugin-barcodescanner 二维码插件</li>
+<li>cordova-plugin-wechat 微信分享插件</li>
+</ul>
+</li>
+</ul>
+<p>© 本文版权归作者和ETENG-WIKI所共有，转载请注明出处。</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../autoBuild/" class="btn btn-neutral float-right" title="Cordova自动化打包">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../config/" class="btn btn-neutral" title="Cordova配置文件"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../config/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../autoBuild/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>
