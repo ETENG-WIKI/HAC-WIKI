@@ -4,7 +4,7 @@
     
     <url>
      <loc>None/buildEnv/</loc>
-     <lastmod>2016-06-06</lastmod>
+     <lastmod>2016-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,7 +12,7 @@
     
     <url>
      <loc>None/getStart/</loc>
-     <lastmod>2016-06-06</lastmod>
+     <lastmod>2016-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -20,7 +20,7 @@
     
     <url>
      <loc>None/direction/</loc>
-     <lastmod>2016-06-06</lastmod>
+     <lastmod>2016-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -28,7 +28,7 @@
     
     <url>
      <loc>None/config/</loc>
-     <lastmod>2016-06-06</lastmod>
+     <lastmod>2016-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -36,7 +36,7 @@
     
     <url>
      <loc>None/plugin/</loc>
-     <lastmod>2016-06-06</lastmod>
+     <lastmod>2016-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -44,7 +44,7 @@
     
     <url>
      <loc>None/autoBuild/</loc>
-     <lastmod>2016-06-06</lastmod>
+     <lastmod>2016-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -52,7 +52,7 @@
     
     <url>
      <loc>None/</loc>
-     <lastmod>2016-06-06</lastmod>
+     <lastmod>2016-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -60,7 +60,7 @@
     
     <url>
      <loc>None/moreinfo/</loc>
-     <lastmod>2016-06-06</lastmod>
+     <lastmod>2016-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -68,7 +68,47 @@
     
     <url>
      <loc>None/contact/</loc>
-     <lastmod>2016-06-06</lastmod>
+     <lastmod>2016-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/integrate_env/</loc>
+     <lastmod>2016-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/integrate_init/</loc>
+     <lastmod>2016-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/integrate_jenkins/</loc>
+     <lastmod>2016-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/integrate_build/</loc>
+     <lastmod>2016-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/integrate_grunt/</loc>
+     <lastmod>2016-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
