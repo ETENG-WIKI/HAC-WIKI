@@ -51,30 +51,6 @@
 
     
     <url>
-     <loc>None/</loc>
-     <lastmod>2016-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>None/moreinfo/</loc>
-     <lastmod>2016-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>None/contact/</loc>
-     <lastmod>2016-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
      <loc>None/integrate_env/</loc>
      <lastmod>2016-08-29</lastmod>
      <changefreq>daily</changefreq>
@@ -108,6 +84,30 @@
     
     <url>
      <loc>None/integrate_grunt/</loc>
+     <lastmod>2016-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/</loc>
+     <lastmod>2016-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/moreinfo/</loc>
+     <lastmod>2016-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/contact/</loc>
      <lastmod>2016-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>

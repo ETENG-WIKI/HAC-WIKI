@@ -76,36 +76,6 @@
             "title": "Cordova\u81ea\u52a8\u5316\u6253\u5305"
         }, 
         {
-            "location": "/", 
-            "text": "\u5173\u4e8eHAC-WIKI\n\n\n\n\n\n\nCordova\u73af\u5883\u642d\u5efa\n\n\n\n\nCordova\u5165\u95e8\n\n\nCordova\u76ee\u5f55\u7b80\u4ecb\n\n\nCordova\u914d\u7f6e\u6587\u4ef6\n\n\nCordova\u63d2\u4ef6\n\n\nCordova\u81ea\u52a8\u5316\u6253\u5305\n\n\nCordova\u6301\u7eed\u96c6\u6210\uff0d\u73af\u5883\u7684\u642d\u5efa\n\n\nCordova\u6301\u7eed\u96c6\u6210\uff0d\u9879\u76ee\u521d\u59cb\u5316\n\n\nCordova\u6301\u7eed\u96c6\u6210\uff0dJenkins\u914d\u7f6e\n\n\nCordova\u6301\u7eed\u96c6\u6210\uff0d\u5f00\u59cb\u6784\u5efa\n\n\n\n\nCordova\u6301\u7eed\u96c6\u6210\uff0d\u4fee\u6539grunt\u4efb\u52a1\n\n\n\n\n\n\n\u66f4\u591a\u6559\u7a0b\n\n\n\n\n\n\n\u8054\u7cfb\u6211\u4eec\n\n\n\n\n\n\n\n\n\u8d21\u732e\u8005\n\n\n\n\njxy   \n\n\nzxh", 
-            "title": "\u5173\u4e8eWIKI"
-        }, 
-        {
-            "location": "/#_1", 
-            "text": "jxy     zxh", 
-            "title": "\u8d21\u732e\u8005"
-        }, 
-        {
-            "location": "/moreinfo/", 
-            "text": "more: \nhttp://eteng-wiki.github.io/ETENG-WIKI/about-wiki", 
-            "title": "\u66f4\u591a"
-        }, 
-        {
-            "location": "/contact/", 
-            "text": "\u8054\u7cfb\u6211\u4eec\n\n\n\u9ad8\u5efa\u534e\n\uff1a\n\n\nEmail\n : gjh@e-teng.com.cn\n\n\nQQ\n: 596902726  \n\n\n\u5f20\u65b0\u822a\n\uff1a\n\n\nEmail\n : zxh@e-teng.com.cn\n\n\nQQ\n: 504266561  \n\n\n\u7ec4\u7ec7\u4fe1\u606f\n\n\nETENG-WIKI:\n\n\nhttps://eteng-wiki.github.io/ETENG-WIKI/about-wiki", 
-            "title": "\u8054\u7cfb\u6211\u4eec"
-        }, 
-        {
-            "location": "/contact/#_1", 
-            "text": "\u9ad8\u5efa\u534e \uff1a  Email  : gjh@e-teng.com.cn  QQ : 596902726    \u5f20\u65b0\u822a \uff1a  Email  : zxh@e-teng.com.cn  QQ : 504266561", 
-            "title": "\u8054\u7cfb\u6211\u4eec"
-        }, 
-        {
-            "location": "/contact/#_2", 
-            "text": "ETENG-WIKI:  https://eteng-wiki.github.io/ETENG-WIKI/about-wiki", 
-            "title": "\u7ec4\u7ec7\u4fe1\u606f"
-        }, 
-        {
             "location": "/integrate_env/", 
             "text": "\u4e00 \u524d\u671f\u51c6\u5907\n\n\n\u670d\u52a1\u5668x1\ndocker\u73af\u5883x1\njekins\u5bb9\u5668x1\n\n\n\u4e8c \u642d\u5efa\u73af\u5883\n\n\n\u9996\u5148\uff0c\u8fdc\u7a0b\u8fde\u63a5\u670d\u52a1\u5668\uff0c\u51c6\u5907\u6750\u6599\uff0c\u4e0b\u8f7ddocker\u955c\u50cf\u3002\n\n\ndocker pull yitengshidai/cordova-grunt\n\n\n\n\n\u63a5\u4e0b\u6765\uff0c\u8fd0\u884cdocker\u955c\u50cf\uff0c\u5e76\u751f\u6210\u53ef\u4ee5\u5728\u540e\u53f0\u5141\u8bb8\u7684\u5bb9\u5668\u3002\n\n\ndocker run --name cordova -it -d yitengshidai/cordova-grunt bash\n\n\n\n\n\u6700\u540e\uff0c\u8fdb\u5165\u65b0\u5efa\u7684cordova\u5bb9\u5668\n\n\ndocker exec -it cordova bash", 
             "title": "Cordova\u6301\u7eed\u96c6\u6210\uff0d\u73af\u5883\u7684\u642d\u5efa"
@@ -214,6 +184,36 @@
             "location": "/integrate_grunt/#gruntfilejs", 
             "text": "\u62f7\u8d1dbuild\u4efb\u52a1\uff0c\u4fee\u6539\u4efb\u52a1\u540d\u4e3abuildTest\uff0c\u5728\u6700\u4e0a\u65b9\u6dfb\u52a0\u4e00\u4e2a\u5b50\u4efb\u52a1copy:test\u3002\u6700\u540e\uff0c\u8fd0\u884cgrunt buildTest\u4efb\u52a1\u5373\u53ef\u3002  grunt.registerTask('buildTest', [\n    'copy:test',\n    'clean',\n    'prepareHtml',\n    'prepareBower',\n    'copy:app',\n    'copy:framework',\n    'useminPrepare',\n    'generated',\n    'usemin',\n    'ngTemplate'\n  ]);", 
             "title": "\u4e09 \u4fee\u6539gruntfile.js"
+        }, 
+        {
+            "location": "/", 
+            "text": "\u5173\u4e8eHAC-WIKI\n\n\n\n\n\n\nCordova\u73af\u5883\u642d\u5efa\n\n\n\n\nCordova\u5165\u95e8\n\n\nCordova\u76ee\u5f55\u7b80\u4ecb\n\n\nCordova\u914d\u7f6e\u6587\u4ef6\n\n\nCordova\u63d2\u4ef6\n\n\nCordova\u81ea\u52a8\u5316\u6253\u5305\n\n\nCordova\u6301\u7eed\u96c6\u6210\uff0d\u73af\u5883\u7684\u642d\u5efa\n\n\nCordova\u6301\u7eed\u96c6\u6210\uff0d\u9879\u76ee\u521d\u59cb\u5316\n\n\nCordova\u6301\u7eed\u96c6\u6210\uff0dJenkins\u914d\u7f6e\n\n\nCordova\u6301\u7eed\u96c6\u6210\uff0d\u5f00\u59cb\u6784\u5efa\n\n\n\n\nCordova\u6301\u7eed\u96c6\u6210\uff0d\u4fee\u6539grunt\u4efb\u52a1\n\n\n\n\n\n\n\u66f4\u591a\u6559\u7a0b\n\n\n\n\n\n\n\u8054\u7cfb\u6211\u4eec\n\n\n\n\n\n\n\n\n\u8d21\u732e\u8005\n\n\n\n\njxy   \n\n\nzxh", 
+            "title": "\u5173\u4e8eWIKI"
+        }, 
+        {
+            "location": "/#_1", 
+            "text": "jxy     zxh", 
+            "title": "\u8d21\u732e\u8005"
+        }, 
+        {
+            "location": "/moreinfo/", 
+            "text": "more: \nhttp://eteng-wiki.github.io/ETENG-WIKI/about-wiki", 
+            "title": "\u66f4\u591a"
+        }, 
+        {
+            "location": "/contact/", 
+            "text": "\u8054\u7cfb\u6211\u4eec\n\n\n\u9ad8\u5efa\u534e\n\uff1a\n\n\nEmail\n : gjh@e-teng.com.cn\n\n\nQQ\n: 596902726  \n\n\n\u5f20\u65b0\u822a\n\uff1a\n\n\nEmail\n : zxh@e-teng.com.cn\n\n\nQQ\n: 504266561  \n\n\n\u7ec4\u7ec7\u4fe1\u606f\n\n\nETENG-WIKI:\n\n\nhttps://eteng-wiki.github.io/ETENG-WIKI/about-wiki", 
+            "title": "\u8054\u7cfb\u6211\u4eec"
+        }, 
+        {
+            "location": "/contact/#_1", 
+            "text": "\u9ad8\u5efa\u534e \uff1a  Email  : gjh@e-teng.com.cn  QQ : 596902726    \u5f20\u65b0\u822a \uff1a  Email  : zxh@e-teng.com.cn  QQ : 504266561", 
+            "title": "\u8054\u7cfb\u6211\u4eec"
+        }, 
+        {
+            "location": "/contact/#_2", 
+            "text": "ETENG-WIKI:  https://eteng-wiki.github.io/ETENG-WIKI/about-wiki", 
+            "title": "\u7ec4\u7ec7\u4fe1\u606f"
         }
     ]
 }
