@@ -8,7 +8,7 @@
   
   
   
-  <title>Cordova配置文件 - HAC 混合应用开发教程</title>
+  <title>Cordova持续集成－开始构建 - HAC 混合应用开发教程</title>
   
 
   <link rel="shortcut icon" href="../img/favicon.ico">
@@ -23,9 +23,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Cordova配置文件";
-    var mkdocs_page_input_path = "config.md";
-    var mkdocs_page_url = "/config/";
+    var mkdocs_page_name = "Cordova持续集成－开始构建";
+    var mkdocs_page_input_path = "integrate_build.md";
+    var mkdocs_page_url = "/integrate_build/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -76,15 +76,8 @@
 <li>
           
             <li>
-    <li class="toctree-l1 current">
-        <a class="current" href="./">Cordova配置文件</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#cordova">Cordova配置文件</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../config/">Cordova配置文件</a>
         
     </li>
 <li>
@@ -146,8 +139,24 @@
 <li>
           
             <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../integrate_build/">Cordova持续集成－开始构建</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Cordova持续集成－开始构建</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#_1">一 修改构建参数</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_2">二 察看构建过程</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_3">三 下载构建结果</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_4">四 注意的坑</a></li>
+                
+            
+            </ul>
         
     </li>
 <li>
@@ -181,7 +190,7 @@
     
       
     
-    <li>Cordova配置文件</li>
+    <li>Cordova持续集成－开始构建</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -191,152 +200,14 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="cordova">Cordova配置文件</h1>
-<ol>
-<li>
-<p>文件位置
-cordova配置文件位于项目根目录下的config.xml文件。</p>
-</li>
-<li>
-<p>配置哪些？</p>
-<blockquote>
-<ul>
-<li>APP名称</li>
-<li>APP包名</li>
-<li>APP版本</li>
-<li>APP闪屏以及图标</li>
-<li>APP的index网页路径</li>
-<li>允许的网址</li>
-<li>允许的协议</li>
-<li>对应平台（iOS和Android）的相关配置</li>
-<li>cordova插件以及版本</li>
-<li>其他请参考cordova官方文档，</li>
-</ul>
-</blockquote>
-</li>
-<li>
-<p>如何配置？</p>
-<blockquote>
-<ul>
-<li>配置APP名称  </li>
-</ul>
-</blockquote>
-</li>
-</ol>
-<pre><code>&lt;name&gt;APP名称&lt;/name&gt;
-</code></pre>
-
-<blockquote>
-<blockquote>
-<ul>
-<li>配置APP包名
-  在weget标签中，修改属性项id，例如：</li>
-</ul>
-</blockquote>
-</blockquote>
-<pre><code>id=&quot;com.eteng.XXX&quot;
-</code></pre>
-
-<blockquote>
-<blockquote>
-<ul>
-<li>APP版本
-  在weget标签中，修改属性项version，例如：</li>
-</ul>
-</blockquote>
-</blockquote>
-<pre><code>version=&quot;0.0.1&quot;
-</code></pre>
-
-<blockquote>
-<blockquote>
-<ul>
-<li>APP闪屏以及图标（需配置相对项目根目录的相关图片路径）<br />
-  闪屏配置  </li>
-</ul>
-</blockquote>
-</blockquote>
-<pre><code>&lt;splash src=&quot;www/images/splash.png&quot; /&gt;
-</code></pre>
-
-<p>icon配置  </p>
-<pre><code>&lt;icon src=&quot;www/images/icon.png&quot; /&gt;
-</code></pre>
-
-<blockquote>
-<blockquote>
-<ul>
-<li>APP的index网页路径  </li>
-</ul>
-</blockquote>
-</blockquote>
-<pre><code>&lt;content src=&quot;index.html&quot; /&gt;
-</code></pre>
-
-<blockquote>
-<blockquote>
-<ul>
-<li>允许的域名  </li>
-</ul>
-</blockquote>
-</blockquote>
-<pre><code>//*代表所有的域名
-&lt;access origin=&quot;*&quot; /&gt;
-</code></pre>
-
-<blockquote>
-<blockquote>
-<ul>
-<li>允许的协议  </li>
-</ul>
-</blockquote>
-</blockquote>
-<pre><code>
-&lt;allow-intent href=&quot;http://*/*&quot; /&gt;
-&lt;allow-intent href=&quot;https://*/*&quot; /&gt;
-&lt;allow-intent href=&quot;tel:*&quot; /&gt;
-&lt;allow-intent href=&quot;sms:*&quot; /&gt;
-&lt;allow-intent href=&quot;mailto:*&quot; /&gt;
-&lt;allow-intent href=&quot;geo:*&quot; /&gt;
-
-</code></pre>
-
-<blockquote>
-<blockquote>
-<ul>
-<li>对应平台（iOS和Android）的相关配置  </li>
-</ul>
-</blockquote>
-</blockquote>
-<pre><code>
-//Android平台（这里是我的配置，仅供参考）
-&lt;platform name=&quot;android&quot;&gt;
-      &lt;allow-intent href=&quot;market:*&quot; /&gt;
-      &lt;preference name=&quot;SplashScreen&quot; value=&quot;screen&quot; /&gt;
-      &lt;preference name=&quot;SplashScreenDelay&quot; value=&quot;10000&quot; /&gt;
-      &lt;preference name=&quot;android-windowSoftInputMode&quot; value=&quot;adjustPan|stateAlwaysHidden&quot; /&gt;
-      &lt;preference name=&quot;Fullscreen&quot; value=&quot;false&quot; /&gt;
-      &lt;preference name=&quot;KeyboardDisplayRequiresUserAction&quot; value=&quot;true&quot; /&gt;
-      &lt;preference name=&quot;KeepRunning&quot; value=&quot;false&quot; /&gt;
-  &lt;/platform&gt;
-
-</code></pre>
-
-<blockquote>
-<blockquote>
-<ul>
-<li>cordova插件以及版本  </li>
-</ul>
-</blockquote>
-</blockquote>
-<pre><code>//一种是插件名称＋插件版本（在cordova插件平台注册插件）
-&lt;plugin name=&quot;cordova-plugin-camera&quot; spec=&quot;~2.2.0&quot; /&gt;
-//另一种是插件名称＋插件地址（一般是自己写的插件）
-&lt;plugin name=&quot;phonegap-plugin-barcodescanner&quot; spec=&quot;https://github.com/JrontEnd/phonegap-plugin-barcodescanner&quot; /&gt;
-
-</code></pre>
-
-<p>© 本文版权归作者和ETENG-WIKI所共有，转载请注明出处。</p>
+                <h2 id="_1">一 修改构建参数</h2>
+<p><img alt="4-1.png" src="../resources/4-1.png" /></p>
+<h2 id="_2">二 察看构建过程</h2>
+<p><img alt="4-2.png" src="../resources/4-2.png" /></p>
+<h2 id="_3">三 下载构建结果</h2>
+<p><img alt="4-3.png" src="../resources/4-3.png" /></p>
+<h2 id="_4">四 注意的坑</h2>
+<p>cordova-plugin-download-manager 和 xgpush-cordova有冲突。请在第一次构建完成后，删除掉xgpush-cordova插件，重新构建。</p>
               
             </div>
           </div>
@@ -344,10 +215,10 @@ cordova配置文件位于项目根目录下的config.xml文件。</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../plugin/" class="btn btn-neutral float-right" title="Cordova插件">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../integrate_grunt/" class="btn btn-neutral float-right" title="Cordova持续集成－修改grunt任务">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../direction/" class="btn btn-neutral" title="Cordova目录结构"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../integrate_jenkins/" class="btn btn-neutral" title="Cordova持续集成－Jenkins配置"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -373,10 +244,10 @@ cordova配置文件位于项目根目录下的config.xml文件。</p>
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../direction/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../integrate_jenkins/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../plugin/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../integrate_grunt/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
